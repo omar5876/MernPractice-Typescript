@@ -1,10 +1,10 @@
 export interface Ivideo {
-    createdAt: string;
+    createdAt?: string;
     description: string;
     title: string;
-    updatedAt: string;
+    updatedAt?: string;
     url: string;
-    _id: string;
+    _id?: string;
 }
 export interface Props {
     video: Ivideo;
