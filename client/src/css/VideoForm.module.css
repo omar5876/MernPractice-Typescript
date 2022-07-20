@@ -1,0 +1,45 @@
+
+.formContainer{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.formContainer form{
+    width: 30%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    
+}
+.formContainer form h2{
+    position: absolute;
+    top: 40px;
+    left: 35%;
+}
+
+.formContainer form label{
+    display: block;
+    margin: 5px 30px;
+    margin-top: 15px;
+}
+
+.formContainer form input[type=text]{
+    width: 80%;
+    margin: 5px 30px;
+}
+
+.formContainer form input[type=submit]{
+    width: 60%;
+    position: absolute;
+    bottom: 30px;
+    left: 20%;
+}
