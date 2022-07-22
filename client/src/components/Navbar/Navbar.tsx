@@ -7,7 +7,9 @@ const Navbar = ({children}: React.PropsWithChildren) => {
     return (
         <nav className={s.navbarContainer}>
             <div className={s.navbarItemsContainer}>
+                <Link to={'/'}>
                 <img src={imgNavbar} alt='navbar'/>
+                </Link>
             <ul>
                 <li><Link className={s.navbarLink} to={'/'}>Favorite Videos</Link></li>
                 <li><Link className={s.navbarLink} to={'newVideo'}>Add Video</Link></li>
