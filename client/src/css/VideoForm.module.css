@@ -20,6 +20,17 @@
     position: relative;
     
 }
+
+@media(max-width: 1000px){
+    .formContainer form{
+        width: 40%;
+    }
+}
+@media(max-width: 800px){
+    .formContainer form{
+        width: 50%;
+    }
+}
 .formContainer form:hover{
 
     box-shadow: 1px 1px 20px white;
