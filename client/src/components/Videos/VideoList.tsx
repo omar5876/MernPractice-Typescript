@@ -1,3 +1,4 @@
+import s from '../../css/VideoList.module.css'
 import { useEffect, useState } from "react"
 import axios from 'axios'
 import { Ivideo } from "../../interfaces/interfaces"
@@ -14,7 +15,7 @@ const VideoList = () => {
 
     }, [])
     return (
-        <div>
+        <div className={s.videoCardsContainer}>
             {videos.map(video => {
                 return (
                     <VideoCard key={video._id} video={video}/>

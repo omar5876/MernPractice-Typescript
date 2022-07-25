@@ -1,0 +1,16 @@
+.videoCardContainer{
+
+    min-width: 20%;
+    border: 1px solid white;
+    margin: 20px;
+    
+    
+}
+
+.videoCardUrlContainer{
+    width: 100%;
+}
+
+.videoCardUrlContainer div{
+    width: 100px;
+}
