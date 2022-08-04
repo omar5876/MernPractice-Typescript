@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
-const VideoCard = ({video}: Props) => {
+const VideoCard = ({video, setFlag, flag}: Props) => {
     let navigate = useNavigate()
 
     const clickToUpdate = ():void => {
@@ -16,7 +16,7 @@ const VideoCard = ({video}: Props) => {
         axios.delete(`http://localhost:5000/videos/${video._id}`)
         .then(res => {
             navigate('/')
-            window.location.reload()
+            setFlag(!flag)
             toast.success('Video has been deleted')
         })
         .catch(error => console.log(error))

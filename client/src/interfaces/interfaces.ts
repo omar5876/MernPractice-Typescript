@@ -8,4 +8,6 @@ export interface Ivideo {
 }
 export interface Props {
     video: Ivideo;
+    setFlag(value:boolean): void;
+    flag: boolean
 }
