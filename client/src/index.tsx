@@ -8,6 +8,8 @@ import VideoForm from './components/Videos/VideoForm';
 import Navbar from './components/Navbar/Navbar';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import VideoUpdate from './components/Videos/VideoUpdate';
+
 
 
 const root = ReactDOM.createRoot(
@@ -21,6 +23,7 @@ root.render(
         <Routes>
           <Route path='/' element={<VideoList/>}/>
           <Route path='newVideo' element={<VideoForm/>}/>
+          <Route path='update/:id' element={<VideoUpdate/>}/>
         </Routes>
         <ToastContainer/>
     </Navbar>

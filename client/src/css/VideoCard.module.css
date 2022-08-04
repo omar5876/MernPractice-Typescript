@@ -1,14 +1,29 @@
 .videoCardContainer{
 
     min-width: 20%;
-    border: 1px solid white;
+    border: 1px dashed white;
+    padding: 10px;
     margin: 20px;
+    border-radius: 20px;
+    position: relative;
     
     
 }
 
+.videoCardContainer h1{
+    cursor: pointer;
+}
+
+.videoCardContainer button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
 .videoCardUrlContainer{
     width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .videoCardUrlContainer div{
