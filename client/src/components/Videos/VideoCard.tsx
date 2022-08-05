@@ -1,7 +1,7 @@
 import {Props} from '../../interfaces/interfaces'
 import s from '../../css/VideoCard.module.css'
 import ReactPlayer from 'react-player'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
@@ -26,7 +26,7 @@ const VideoCard = ({video, setFlag, flag}: Props) => {
             <button onClick={deleteVideo}>Delete</button>
             <h1 onClick={clickToUpdate}>{video.title}</h1>
             <div className={s.videoCardUrlContainer}>
-            <ReactPlayer url={video.url} width='100%'/>
+            <ReactPlayer url={video.url} width='100%' height={'200px'}/>
             </div>
             <p>{video.description}</p>
         </div>
