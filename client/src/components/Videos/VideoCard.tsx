@@ -26,7 +26,7 @@ const VideoCard = ({video, setFlag, flag}: Props) => {
             <button onClick={deleteVideo}>Delete</button>
             <h1 onClick={clickToUpdate}>{video.title}</h1>
             <div className={s.videoCardUrlContainer}>
-            <ReactPlayer url={video.url} width='100%' height={'200px'}/>
+            <ReactPlayer url={video.url} width='100%' height={'200px'} controls={true}/>
             </div>
             <p>{video.description}</p>
         </div>

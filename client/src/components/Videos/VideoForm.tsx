@@ -26,14 +26,18 @@ const VideoForm = () => {
       e.preventDefault()
       console.log(input)
       try {
-        await axios.post('http://localhost:5000/videos', input)
-        setInput({
-          title: '', 
-          url: '', 
-          description: ''
-        })
-        toast.success('New Video has been created')
-        navigate('/')
+        if(!input.title || !input.url || !input.description) toast.warn("Some fields are missing")
+        else{
+
+          await axios.post('http://localhost:5000/videos', input)
+          setInput({
+            title: '', 
+            url: '', 
+            description: ''
+          })
+          toast.success('New Video has been created')
+          navigate('/')
+        }
       } catch (error) {
         console.log(error)
       }
@@ -45,15 +49,15 @@ const VideoForm = () => {
           <h2>New Video</h2>
       
           <label htmlFor="title">Title</label>
-          <input type="text" name="title" value={input.title} onChange={handleChange}/>
+          <input type="text" name="title"  value={input.title} onChange={handleChange}/>
         
       
           <label htmlFor="url">Url</label>
-          <input type="text" name="url" value={input.url} onChange={handleChange}/>
+          <input type="text" name="url"   value={input.url} onChange={handleChange}/>
         
       
           <label htmlFor="description">Description</label>
-          <input type="text" name="description" value={input.description} onChange={handleChange}/>
+          <input type="text" name="description"  value={input.description} onChange={handleChange}/>
         
       
             <input type="submit" value={'Create'} />

@@ -27,14 +27,19 @@ const VideoUpdate = () => {
       e.preventDefault()
       console.log(input)
       try {
-        await axios.put(`http://localhost:5000/videos/${id}`, input)
-        setInput({
-          title: '', 
-          url: '', 
-          description: ''
-        })
-        toast.success('Video has been updated')
-        navigate('/')
+
+        if(!input.title || !input.url || !input.description) toast.warn("Some fields are missing")
+        else {
+          
+          await axios.put(`http://localhost:5000/videos/${id}`, input)
+          setInput({
+            title: '', 
+            url: '', 
+            description: ''
+          })
+          toast.success('Video has been updated')
+          navigate('/')
+        }
       } catch (error) {
         console.log(error)
       }

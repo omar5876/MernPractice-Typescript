@@ -42,6 +42,9 @@
     cursor: pointer;
 }
 
+.videoCardContainer button:hover{
+    transform: scale(1.1);
+}
 .videoCardUrlContainer{
     width: 100%;
     margin: 10px 0;
